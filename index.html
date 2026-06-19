@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CyberROOM Academy</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+    color:#333;
+}
+
+/* Header */
+header{
+    background:#0f172a;
+    color:white;
+    padding:20px 8%;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* Hero Section */
+.hero{
+    background:linear-gradient(135deg,#2563eb,#0ea5e9);
+    color:white;
+    text-align:center;
+    padding:120px 20px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:white;
+    color:#2563eb;
+    padding:14px 30px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* Sections */
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:40px;
+    color:#0f172a;
+}
+
+/* About */
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border-radius:15px;
+}
+
+/* Courses */
+.courses{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.course-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:0.3s;
+}
+
+.course-card:hover{
+    transform:translateY(-10px);
+}
+
+.course-card h3{
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+/* Contact */
+.contact{
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.contact form{
+    display:flex;
+    flex-direction:column;
+}
+
+.contact input,
+.contact textarea{
+    margin-bottom:15px;
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+.contact button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+/* Footer */
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+    }
+
+    nav ul{
+        margin-top:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">CyberROOM Academy</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h1>Learn Future Skills Today</h1>
+    <p>AI • Data Science • Programming • Web Development</p>
+    <a href="#courses" class="btn">Explore Courses</a>
+</section>
+
+<section class="container" id="about">
+    <h2 class="section-title">About CyberROOM Academy</h2>
+
+    <div class="about">
+        <div>
+            <h3>Empowering Future Professionals</h3>
+            <br>
+            <p>
+                CyberROOM Academy provides practical and industry-focused
+                training in Artificial Intelligence, Data Science,
+                Programming, Office Automation, WordPress, and Web Development.
+            </p>
+            <br>
+            <p>
+                Our mission is to help students develop real-world skills
+                through hands-on projects and expert guidance.
+            </p>
+        </div>
+
+        <div>
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+                 alt="Students Learning">
+        </div>
+    </div>
+</section>
+
+<section class="container" id="courses">
+    <h2 class="section-title">Our Courses</h2>
+
+    <div class="courses">
+
+        <div class="course-card">
+            <h3>Artificial Intelligence</h3>
+            <p>Learn AI tools, prompt engineering, and machine learning fundamentals.</p>
+        </div>
+
+        <div class="course-card">
+            <h3>Data Science</h3>
+            <p>Master Python, data visualization, analytics, and statistics.</p>
+        </div>
+
+        <div class="course-card">
+            <h3>Web Development</h3>
+            <p>Create modern responsive websites using HTML, CSS, JavaScript.</p>
+        </div>
+
+        <div class="course-card">
+            <h3>WordPress Development</h3>
+            <p>Build professional websites and blogs with WordPress.</p>
+        </div>
+
+        <div class="course-card">
+            <h3>Office Automation</h3>
+            <p>Learn MS Word, Excel, PowerPoint, and productivity tools.</p>
+        </div>
+
+        <div class="course-card">
+            <h3>Programming Fundamentals</h3>
+            <p>Develop coding skills through modern programming languages.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="container" id="contact">
+    <h2 class="section-title">Contact Us</h2>
+
+    <div class="contact">
+
+        <form>
+            <input type="text" placeholder="Your Name" required>
+
+            <input type="email" placeholder="Your Email" required>
+
+            <textarea rows="5" placeholder="Your Message"></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+    </div>
+</section>
+
+<footer>
+    <h3>CyberROOM Academy</h3>
+    <br>
+    <p>Learn • Build • Innovate</p>
+    <br>
+    <p>© 2026 CyberROOM Academy. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
